@@ -12,19 +12,6 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        /* table {
-            width: 100%;
-        } */
-        /* table, th, td {
-          border: 1px solid red;
-          border-collapse: collapse;
-        } */
-        /* td {
-            margin-bottom: 10px;
-            display: block;
-        } */
-    </style>
 </head>
 <body>
     <div class="container">
@@ -63,85 +50,30 @@
                 </div>
             </div>
 
-
-
-            <!-- Simple results Start Here -->
+            <!-- Simple results Area Start Here -->
             <div class="d-flex justify-content-center">
-                <div id="simple-results" class="simple-results">
-
-                    <!-- <div class="simple-result single-padding">
-                        <div class="row align-items-center single-padding">
-                            <div class="col-md-9">
-                                <p class="author lead">
-                                    <strong>Purple Noon</strong> Album by <span>Bangla Out</span>
-                                </p>
-                            </div>
-                            <div class="col-md-3 text-md-right text-center">
-                                <button class="btn btn-success" data-toggle="collapse" data-target="#collapseSimple">Get Lyrics</button>
-                            </div>
-                        </div>
-                        <div id="collapseSimple" class="collapse row">
-                            <div class="card-body" id="simple-lyrics">
-                                <h3 class="lyrics-name text-center">Purple Noon</h3>
-                                <p class="author lead text-center">Album by <span>Washed Out</span></p>
-                                <p id="lyrics">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="simple-result single-padding">
-                        <div class="row align-items-center single-padding">
-                            <div class="col-md-9">
-                                <p class="author lead">
-                                    <strong>Purple Noon</strong> Album by <span>Bangla Out</span>
-                                </p>
-                            </div>
-                            <div class="col-md-3 text-md-right text-center">
-                                <button class="btn btn-success" data-toggle="collapse" data-target="#collapseSimple2">Get Lyrics</button>
-                            </div>
-                        </div>
-                        <div id="collapseSimple2" class="collapse row">
-                            <div class="card-body" id="simple-lyrics">
-                                <h3 class="lyrics-name text-center">Purple Noon</h3>
-                                <p class="author lead text-center">Album by <span>Washed Out</span></p>
-                                <p id="lyrics">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Another Styles Reserved on Stock -->
-                    <!-- <table id="simple-table">
-                            <tr>
-                                <td><strong>Purple Noon</strong> Album by <span>Washed Out</span></td>
-                                <td><button class="btn btn-success">Get Lyrics</button></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Purple Noon</strong> Album by <span>Washed Out</span></td>
-                                <td><button class="btn btn-success">Get Lyrics</button></td>
-                            </tr>
-                     </table> -->
-                    <!-- <p class="author lead">
-                        <strong>Purple Noon</strong> Album by <span>Bangla Out</span>
-                        <button class="btn btn-success">Get Lyrics</button>
-                    </p> -->
-                </div>
+                <div id="simple-results" class="simple-results"></div>
             </div>
-
-
-
-                
-
-
             <!-- Simple results End Here -->
 
-
-            <!-- Simple Results Lyrics Show Here -->
-            <!-- <div id="" class="single-lyrics text-center"></div> -->
-            
-
-            <!-- Fancy results Start here -->
+            <!-- Fancy results Area Start here -->
             <div id="fancy-results" class="accordion search-result col-md-8 mx-auto py-4">
-
+                <div class="fancy-result single-padding">
+                    <div class="single-result row align-items-center single-padding">
+                        <div class="col-md-9">
+                            <h3 class="lyrics-name">Purple Noon</h3>
+                            <p class="author lead">Album by <span>Washed Out</span></p>
+                        </div>
+                        <div class="col-md-3 text-md-right text-center">
+                            <button class="btn btn-success" data-toggle="collapse" data-target="#collapseTwo">Get Lyrics</button>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse row">
+                        <div class="card-body fancy-lyrics">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="fancy-result single-padding">
                     <div class="single-result row align-items-center single-padding">
                         <div class="col-md-9">
@@ -158,49 +90,12 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="fancy-result single-padding">
-                    <div class="single-result row align-items-center single-padding">
-                        <div class="col-md-9">
-                            <h3 class="lyrics-name">Purple Noon</h3>
-                            <p class="author lead">Album by <span>Washed Out</span></p>
-                        </div>
-                        <div class="col-md-3 text-md-right text-center">
-                            <button class="btn btn-success" data-toggle="collapse" data-target="#collapseTwo">Get Lyrics</button>
-                        </div>
-                    </div>
-                    <div id="collapseTwo" class="collapse row">
-                        <div class="card-body fancy-lyrics single-padding">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fancy-result single-padding">
-                    <div class="single-result row align-items-center single-padding">
-                        <div class="col-md-9">
-                            <h3 class="lyrics-name">Purple Noon</h3>
-                            <p class="author lead">Album by <span>Washed Out</span></p>
-                        </div>
-                        <div class="col-md-3 text-md-right text-center">
-                            <button class="btn btn-success" data-toggle="collapse" data-target="#collapseThree">Get Lyrics</button>
-                        </div>
-                    </div>
-                    <div id="collapseThree" class="collapse row">
-                        <div class="card-body fancy-lyrics single-padding">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Fancy results End here -->
-	
 
-            <!-- <div id="fancy-lyrics" class="single-lyrics text-center"></div> -->
-
-            
         </main>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

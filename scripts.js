@@ -25,7 +25,7 @@ function searchLyrics(){
             const artist = element.artist.name;
             const id = element.id;
 
-            simpleResults.innerHTML +=      `
+            simpleResults.innerHTML +=   `
                                         <div class="simple-result single-padding">
                                             <div class="row align-items-center single-padding">
                                                 <div class="col-md-9">
