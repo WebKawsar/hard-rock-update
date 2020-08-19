@@ -26,7 +26,10 @@ function searchLyrics(){
             const title = element.title;
             const artist = element.artist.name;
             const id = element.id;
-
+            const image = element.album.cover;
+            const audio = element.link;
+            const preview = element.preview;
+            
             simpleResults.innerHTML +=   `
                                         <div class="simple-result single-padding">
                                             <div class="row align-items-center single-padding">
@@ -52,11 +55,16 @@ function searchLyrics(){
             fencyResults.innerHTML +=  `
                                         <div class="fancy-result single-padding">
                                             <div class="single-result row align-items-center single-padding">
-                                                <div class="col-md-9">
+                                                <div class="col-md-7">
+                                                    <img src="${image}" alt="">
                                                     <h3 class="lyrics-name">${title}</h3>
                                                     <p class="author lead"> - Album by <span>${artist}</span></p>
+                                                    <audio controls>
+                                                        <source src="${preview}" type="audio/mp3">
+                                                    </audio>
                                                 </div>
-                                                <div class="col-md-3 text-md-right text-center">
+                                                <div class="col-md-5 text-md-right text-center">
+                                                    <a href="${audio}" class="btn btn-success">Full Audio</a>
                                                     <button class="btn btn-success" data-toggle="collapse" data-target="#collapse${id}">Get Lyrics</button>
                                                 </div>
                                             </div>
