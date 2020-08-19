@@ -33,8 +33,8 @@ function searchSong(){
 
             table.innerHTML +=      `
                                     <tr>
-                                        <td><strong id="title-name">${title}</strong> - Album by <span id="artist-name">${artist}</span></td>
-                                        <td><button class="btn btn-success show-lyrics">Get Lyrics</button></td>
+                                        <td class="author lead"><strong id="title-name">${title}</strong> - Album by <span id="artist-name">${artist}</span></td>
+                                        <td class="author lead"><button class="btn btn-success show-lyrics">Get Lyrics</button></td>
                                     </tr>
                                     
                                     `;
