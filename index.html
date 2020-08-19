@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="container">
@@ -48,19 +49,20 @@
                     <button id="search" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
-            <!-- === Simple results === -->
-            <div class="d-flex justify-content-center">
-                <div id="results"></div>
-            </div>
-            <!-- Single Lyrics -->
-            <div id="single-lyrics" class="single-lyrics text-center"></div>
-            
-            <!-- === Fancy results === -->
-            <div id="fancy-results" class="search-result col-md-8 mx-auto py-4"></div>
 
-            <div id="fancy-lyrics" class="single-lyrics text-center"></div>
+            <!-- Simple results Area Start Here -->
+            <div class="d-flex justify-content-center">
+                <div id="simple-results" class="simple-results"></div>
+            </div>
+            <!-- Simple results End Here -->
+
+            <!-- Fancy results Area Start here -->
+            <div id="fancy-results" class="accordion search-result col-md-8 mx-auto py-4"></div>
+            <!-- Fancy results End here -->
+
         </main>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

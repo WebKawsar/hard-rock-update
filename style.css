@@ -34,8 +34,21 @@ body{
     right: 0;
     height: 100%;
 }
+
+.simple-results {
+    width: 60%;
+}
+
 .single-result{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
 }
 
+.fancy-style {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    color: black;
+}
+.single-padding {
+    padding: 10px;
+}
