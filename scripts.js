@@ -20,8 +20,8 @@ function searchSong(){
     .then(response => response.json())
     .then(data =>{
 
-        const results = document.getElementById("results");
-        results.innerHTML = "";
+        const table = document.getElementById("table");
+        table.innerHTML = "";
 
         const fancyResults = document.getElementById("fancy-results");
         fancyResults.innerHTML = "";
@@ -31,10 +31,13 @@ function searchSong(){
             const title = element.title;
             const artist = element.artist.name;
 
-            results.innerHTML +=    `<p class="author lead">
-                                        <strong id="title-name">${title}</strong> - Album by <span id="artist-name">${artist}</span>
-                                        <button class="btn btn-success show-lyrics">Get Lyrics</button>
-                                    </p>`;
+            table.innerHTML +=      `
+                                    <tr>
+                                        <td><strong id="title-name">${title}</strong> - Album by <span id="artist-name">${artist}</span></td>
+                                        <td><button class="btn btn-success show-lyrics">Get Lyrics</button></td>
+                                    </tr>
+                                    
+                                    `;
 
             fancyResults.innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                             <div class="col-md-7">
@@ -60,8 +63,8 @@ function searchSong(){
 
             element.addEventListener("click", function(event){
 
-                const titleName = this.parentNode.childNodes[1].innerHTML;
-                const artistName = this.parentNode.childNodes[3].innerHTML;
+                const titleName = this.parentNode.parentNode.childNodes[1].childNodes[0].innerText;
+                const artistName = this.parentNode.parentNode.childNodes[1].childNodes[2].innerText;
 
                 const secondUrl = `https://api.lyrics.ovh/v1/${artistName}/${titleName}`;
 
@@ -143,7 +146,7 @@ function searchSong(){
 
          
         document.getElementById("song-name").value = "";
-        console.log("this added by try");
+        
     })
 
 }
