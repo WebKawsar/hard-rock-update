@@ -18,6 +18,8 @@ function searchLyrics(){
 
         const simpleResults = document.getElementById("simple-results");
         simpleResults.innerHTML = "";
+        const fencyResults = document.getElementById("fancy-results");
+        fencyResults.innerHTML = "";
 
         for (let i = 0; i < 10; i++) {
             const element = data.data[i];
@@ -47,6 +49,26 @@ function searchLyrics(){
                                         </div>
                                     
                                         `;
+            fencyResults.innerHTML +=  `
+                                        <div class="fancy-result single-padding">
+                                            <div class="single-result row align-items-center single-padding">
+                                                <div class="col-md-9">
+                                                    <h3 class="lyrics-name">${title}</h3>
+                                                    <p class="author lead"> - Album by <span>${artist}</span></p>
+                                                </div>
+                                                <div class="col-md-3 text-md-right text-center">
+                                                    <button class="btn btn-success" data-toggle="collapse" data-target="#collapse${id}">Get Lyrics</button>
+                                                </div>
+                                            </div>
+                                            <div id="collapse${id}" class="collapse row">
+                                                <div class="card-body fancy-style">
+                                                    <h3 class="lyrics-name text-center">${title}</h3>
+                                                    <p class="author lead text-center"> - Album by <span>${artist}</span></p>
+                                                    <p class="text-center" id="fency-lyrics${id}"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        `;
     
             const secondUrl = `https://api.lyrics.ovh/v1/${artist}/${title}`;
     
@@ -55,15 +77,18 @@ function searchLyrics(){
             .then(lyricsData => {
 
                 const simpleLyrics = document.getElementById(`simple-lyrics${id}`);
+                const fencyLyrics = document.getElementById(`fency-lyrics${id}`);
                 const lyrics = lyricsData.lyrics;
 
                 if(lyrics == undefined){
                     
                     simpleLyrics.innerText = `This Songs Lyrics not found.Feel comfort listen audio !!!!.....`;
+                    fencyLyrics.innerText = `This Songs Lyrics not found.Feel comfort listen audio !!!!.....`;
                 }
                 else {
 
                     simpleLyrics.innerText += `${lyrics}`;
+                    fencyLyrics.innerText += `${lyrics}`;
                 }
     
             })
