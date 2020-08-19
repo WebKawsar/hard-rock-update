@@ -20,8 +20,8 @@ function searchSong(){
     .then(response => response.json())
     .then(data =>{
 
-        const table = document.getElementById("table");
-        table.innerHTML = "";
+        const simpleResults = document.getElementById("simple-results");
+        simpleResults.innerHTML = "";
 
         const fancyResults = document.getElementById("fancy-results");
         fancyResults.innerHTML = "";
@@ -30,14 +30,30 @@ function searchSong(){
             const element = data.data[i];
             const title = element.title;
             const artist = element.artist.name;
+            const id = element.id;
 
-            table.innerHTML +=      `
-                                    <tr>
-                                        <td class="author lead"><strong id="title-name">${title}</strong> - Album by <span id="artist-name">${artist}</span></td>
-                                        <td class="author lead"><button class="btn btn-success show-lyrics">Get Lyrics</button></td>
-                                    </tr>
+            simpleResults.innerHTML +=      `
+                                        <div class="simple-result single-padding">
+                                            <div class="row align-items-center single-padding">
+                                                <div class="col-md-9">
+                                                    <p class="author lead">
+                                                        <strong>${title}</strong> - Album by <span>${artist}</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-3 text-md-right text-center">
+                                                    <button class="btn btn-success" data-toggle="collapse" data-target="#simpleCollapse${id}">Get Lyrics</button>
+                                                </div>
+                                            </div>
+                                            <div id="simpleCollapse${id}" class="collapse row">
+                                                <div class="card-body" id="simple-lyrics">
+                                                    <h3 class="lyrics-name text-center">${title}</h3>
+                                                    <p class="author lead text-center"> - Album by <span>${artist}</span></p>
+                                                    <p id="lyrics">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates nobis beatae iste maiores aspernatur repellendus! Obcaecati placeat repellendus maxime!</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     
-                                    `;
+                                        `;
 
             fancyResults.innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                             <div class="col-md-7">
